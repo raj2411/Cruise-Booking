@@ -1,0 +1,13 @@
+/* Author: Harsh Vaghani - B00923828 - harsh.vaghani@dal.ca */
+
+.grid {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	height: fit-content;
+}
+
+@media (max-width: 1000px) {
+	.grid {
+		grid-template-columns: auto;
+	}
+}

@@ -1,0 +1,50 @@
+/* // Author: Harsh Vaghani - B00923828 - harsh.vaghani@dal.ca */
+
+mat-toolbar {
+	flex: 1 1 auto;
+	justify-content: space-between;
+}
+mat-checkbox {
+	display: none;
+}
+
+.mat-mdc-button > .mat-icon {
+	margin: 0px;
+}
+
+.icon-container {
+	margin-top: 5px;
+	display: inline-grid;
+	justify-items: center;
+	justify-content: space-around;
+	padding-left: 50px;
+}
+
+.nav-items {
+	display: inline-flex;
+	align-items: center;
+}
+
+.heading {
+	font-size: x-large;
+}
+
+.menu-btn {
+	display: flex;
+}
+
+.nav-buttons {
+	width: fit-content;
+	color: white !important;
+}
+
+.nav-buttons:hover {
+	background-color: white;
+	color: #3f51b5 !important;
+}
+
+@media (max-width: 952px) {
+	.icon-container {
+		padding-left: 50px;
+	}
+}

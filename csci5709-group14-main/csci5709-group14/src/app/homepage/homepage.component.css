@@ -1,0 +1,78 @@
+/* Author: Akash Gupta - B00912118 - ak459448@dal.ca */
+
+.navbar {
+	background-color: #e3f2fd;
+}
+
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+	background-color: whitesmoke;
+	border-style: groove;
+}
+
+.column {
+	float: left;
+}
+
+.left {
+	margin-left: 7%;
+	margin-top: 3%;
+}
+
+.right {
+	margin-left: 5%;
+	margin-top: 3%;
+}
+
+.center {
+	margin-left: 14%;
+	margin-top: 3%;
+}
+
+.searchCruise {
+	width: 101%;
+	background-image: url(../../assets/images/Cruise_Home.jpg);
+	height: 600px;
+	background-size: 100% 93%;
+	background-repeat: no-repeat;
+}
+
+.searchOptions {
+	/* background-color: lightblue; */
+	width: 103%;
+	height: 250px;
+	margin-left: 10%;
+	margin-top: 4%;
+	margin-left: 5%;
+	margin-right: 3%;
+	border-radius: 100px;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	flex-flow: column wrap;
+	flex-direction: row;
+}
+
+li {
+	padding: 1em;
+	margin: 2px;
+}
+
+.matField {
+	width: 188%;
+}
+
+.matFieldOption {
+	width: 115%;
+}
+
+@media all and (max-width:1444px) {
+	.matField {
+		width: 160%;
+	}
+
+	.matFieldOption {
+		width: 100%;
+	}
+}

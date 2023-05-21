@@ -1,0 +1,36 @@
+<!-- Author: Karan Aggarwal (B00912580) -->
+
+<div class="maindiv">
+  <section class="feedbackform">
+    <h1>Feedback</h1>
+    <h2>Please provide your Feedback below: </h2>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+      <label> Name </label><br>
+      <input name="name" ngModel required [(ngModel)]="name" (keypress)="checkAlpha($event)">       
+      <p style="color:red" *ngIf="name.length<1 && submitted == true">
+        Please enter your name.
+      </p> 
+      <br/><br/>
+
+      <label> Phone Number </label><br>
+      <input name="phone" ngModel required [(ngModel)]="phone" (keypress)="checkNumeric($event)">
+      <p style="color:red" *ngIf="(phone.length <= 8 || phone.length > 10) && submitted == true">
+        Please enter your valid Phone Number.
+      </p>  <br/><br/>
+
+      <label> Email Address </label><br>
+      <input type="email" name="first" ngModel required [(ngModel)]="email">
+      <p style="color:red" *ngIf="(email.length<1 || emailFail == true) && submitted == true">
+        Please enter your email address.
+      </p>  <br/><br/>
+
+      <label> Feedback </label><br>
+      <textarea name="first" ngModel required [(ngModel)]="feedback"></textarea>
+      <p style="color:red" *ngIf="feedback.length<1 && submitted == true">
+        Please enter your email address.
+      </p>  <br/><br/> 
+      <button class="submit" type="submit">Submit</button>
+    </form>
+  </section>
+</div>

@@ -1,0 +1,120 @@
+<!-- Author: Akash Gupta - B00912118 - ak459448@dal.ca -->
+
+<main>
+	<div class="searchCruise row">
+		<div class="searchOptions">
+			<div class="column left">
+				<mat-form-field appearance="fill" class="matField">
+					<mat-label>Source</mat-label>
+					<mat-select>
+						<mat-option
+							*ngFor="let source of sourcesList"
+							[value]="source"
+						>
+							{{ source }}
+						</mat-option>
+					</mat-select>
+				</mat-form-field>
+			</div>
+
+			<div class="column center">
+				<mat-form-field appearance="fill" class="matFieldOption">
+					<mat-label>Enter a date range</mat-label>
+					<mat-date-range-input [rangePicker]="rangePicker">
+						<input matStartDate placeholder="Start date" />
+						<input matEndDate placeholder="End date" />
+					</mat-date-range-input>
+					<mat-datepicker-toggle
+						matIconSuffix
+						[for]="rangePicker"
+					></mat-datepicker-toggle>
+					<mat-date-range-picker #rangePicker>
+						<mat-date-range-picker-actions>
+							<button mat-button matDateRangePickerCancel>
+								Cancel
+							</button>
+							<button
+								mat-raised-button
+								color="primary"
+								matDateRangePickerApply
+							>
+								Apply
+							</button>
+						</mat-date-range-picker-actions>
+					</mat-date-range-picker>
+				</mat-form-field>
+				<button
+					type="button"
+					class="btn btn-primary"
+					style="margin-left: 39%; margin-top: 3%; width: 37%"
+					routerLink="cruiselist"
+				>
+					Search
+				</button>
+			</div>
+
+			<div class="column right">
+				<mat-form-field appearance="fill" class="matField">
+					<mat-label>Destination</mat-label>
+					<mat-select>
+						<mat-option
+							*ngFor="let destination of destinationList"
+							[value]="destination"
+						>
+							{{ destination }}
+						</mat-option>
+					</mat-select>
+				</mat-form-field>
+			</div>
+		</div>
+	</div>
+
+	<div class="happenings">
+		<h1
+			style="
+				font-weight: bolder;
+				color: #595959;
+				margin-left: 42%;
+				font-size: 280%;
+			"
+		>
+			Happenings
+		</h1>
+	</div>
+
+	<div>
+		<ul style="margin-left: 5%; margin-top: 5%">
+			<li
+				*ngFor="let happenings of happeningsList; index as i"
+				class="shadow-lg p-3 mb-5 bg-white rounded col-lg-3"
+				style="margin-left: 5%"
+			>
+				<div class="imgSrc">
+					<img
+						style="height: 250px"
+						[src]="happenings.event.image"
+						alt=""
+						width="100%"
+					/>
+				</div>
+				<div class="title">
+					<h2>{{ happenings.event.name }}</h2>
+				</div>
+				<div class="intro">
+					<h3>{{ happenings.event.description }}</h3>
+				</div>
+				<div class="viewDetails">
+					<button
+						style="float: right"
+						type="button"
+						class="btn btn-primary"
+						routerLink="packagedetails"
+						[routerLink]="['/eventdetails', happenings._id]"
+					>
+						View Details
+					</button>
+				</div>
+			</li>
+		</ul>
+	</div>
+</main>

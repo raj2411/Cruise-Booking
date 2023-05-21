@@ -1,0 +1,21 @@
+ /* Author: Krina Mistry - B00927702 kr981143@dal.ca  */
+
+ .center {
+     text-align: center;
+     margin: 20px;
+     color: green;
+ }
+
+ .booking-confirmed {
+     max-width: 800px;
+     margin: 0 auto;
+     text-align: center;
+ }
+
+ .personal-information,
+ .booking-information,
+ .card-information {
+     margin: 20px auto;
+     max-width: 600px;
+     text-align: left;
+ }

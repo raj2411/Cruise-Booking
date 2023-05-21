@@ -1,0 +1,79 @@
+/* // Author: Harsh Vaghani - B00923828 - harsh.vaghani@dal.ca */
+
+.body {
+	display: flex;
+	min-height: 50vh;
+	align-items: center;
+	background-image: url('../../assets/images/login-cruise-img-2.jpg');
+	background-position: 50%;
+	background-size: cover;
+}
+
+mat-card-content {
+	min-width: 600px;
+}
+mat-card {
+	margin: 2em auto;
+	text-align: center;
+	background-color: rgba(3, 13, 17, 0.479);
+	-webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+}
+
+mat-label {
+	color: #fff;
+	text-shadow: 2px 2px #000000b2;
+}
+
+.header {
+	text-align: center;
+	font-size: xx-large;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+		sans-serif;
+	font-weight: 600;
+	margin-bottom: 20px;
+	color: #fff;
+	text-shadow: 2px 2px #000000b2;
+}
+
+.full-width {
+	width: 80%;
+}
+
+.input-div {
+	margin-bottom: 10px;
+}
+
+input {
+	color: #fff !important;
+	display: flex;
+	width: 100%;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 2px solid #ccc;
+	text-shadow: 2px 2px #000000b2;
+}
+
+.button {
+	margin-top: auto;
+	margin-left: 236px;
+}
+.button-container {
+	display: flex;
+	margin-top: 20px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.aLink {
+	float: right;
+	padding-right: 60px;
+	text-decoration: none;
+	color: #fff;
+}
+
+.error {
+	margin-top: -20px;
+	color: red;
+	font-size: 14px;
+}

@@ -1,0 +1,208 @@
+<main class="form">
+	<div class="form-title">
+		<h1>Confirm your booking!</h1>
+	</div>
+	<div class="form-stepper">
+		<mat-vertical-stepper [linear]="false" #stepper>
+			<mat-step [stepControl]="contactDetails">
+				<form [formGroup]="contactDetails">
+					<ng-template matStepLabel
+						>Your Personal Details</ng-template
+					>
+					<div class="form-fields">
+						<mat-form-field>
+							<div>
+								<input
+									matInput
+									placeholder="First name"
+									formControlName="firstName"
+									required
+								/>
+							</div>
+						</mat-form-field>
+
+						<mat-form-field>
+							<div>
+								<input
+									matInput
+									placeholder="Last name"
+									formControlName="lastName"
+									required
+								/>
+							</div>
+						</mat-form-field>
+						<mat-form-field>
+							<div>
+								<input
+									matInput
+									placeholder="Email"
+									formControlName="email"
+									required
+								/>
+							</div>
+						</mat-form-field>
+						<mat-form-field>
+							<div>
+								<input
+									matInput
+									placeholder="Phone"
+									formControlName="phone"
+									required
+								/>
+							</div>
+						</mat-form-field>
+					</div>
+					<div>
+						<button mat-button matStepperNext class="form-buttons">
+							Next
+						</button>
+					</div>
+				</form>
+			</mat-step>
+			<mat-step [stepControl]="event">
+				<form [formGroup]="event">
+					<ng-template matStepLabel>Event Details</ng-template>
+					<div class="form-fields">
+						<mat-form-field>
+							<div>
+								<input
+									matInput
+									placeholder="Event Name"
+									formControlName="name"
+									required
+								/>
+							</div>
+						</mat-form-field>
+
+						<mat-form-field>
+							<div>
+								<input
+									matInput
+									placeholder="Location"
+									formControlName="location"
+									required
+								/>
+							</div>
+						</mat-form-field>
+					</div>
+					<div class="form-fields">
+						<mat-form-field>
+							<div>
+								<input
+									matInput
+									type="date"
+									placeholder="Date"
+									formControlName="date"
+									required
+								/>
+							</div>
+						</mat-form-field>
+
+						<mat-form-field>
+							<div>
+								<input
+									matInput
+									type="time"
+									placeholder="Time"
+									formControlName="time"
+									required
+								/>
+							</div>
+						</mat-form-field>
+					</div>
+					<div>
+						<button mat-button matStepperNext class="form-buttons">
+							Next
+						</button>
+					</div>
+				</form>
+			</mat-step>
+			<mat-step [stepControl]="details">
+				<form [formGroup]="details">
+					<ng-template matStepLabel>Additional Details</ng-template>
+					<div class="form-fields">
+						<mat-form-field>
+							<div>
+								<textarea
+									matInput
+									placeholder="Description"
+									formControlName="description"
+									required
+								></textarea>
+							</div>
+						</mat-form-field>
+
+						<div formArrayName="highlights">
+							<div
+								*ngFor="
+									let highlight of highlights.controls;
+									let i = index
+								"
+								class="highlight-container"
+							>
+								<mat-form-field class="highlight-input">
+									<input
+										matInput
+										placeholder="Highlight"
+										[formControlName]="i"
+										required
+									/>
+								</mat-form-field>
+								<button
+									mat-icon-button
+									class="delete-button"
+									(click)="removeHighlight(i)"
+								>
+									<mat-icon>delete</mat-icon>
+								</button>
+							</div>
+						</div>
+
+						<button
+							(click)="addHighlight()"
+							class="add-highlight-button"
+						>
+							Add Highlight
+						</button>
+
+						<mat-form-field>
+							<div>
+								<textarea
+									matInput
+									placeholder="Additional Details"
+									formControlName="additionalDetails"
+									required
+								></textarea>
+							</div>
+						</mat-form-field>
+					</div>
+					<div>
+						<button mat-button matStepperNext class="form-buttons">
+							Next
+						</button>
+					</div>
+				</form>
+			</mat-step>
+			<mat-step>
+				<ng-template matStepLabel>Complete</ng-template>
+				<h2>Submit yout details.</h2>
+				<div>
+					<button
+						mat-button
+						(click)="stepper.reset()"
+						class="reset-button"
+					>
+						Reset
+					</button>
+					<button
+						mat-button
+						(click)="createEvent()"
+						class="submit-button"
+					>
+						Submit
+					</button>
+				</div>
+			</mat-step>
+		</mat-vertical-stepper>
+	</div>
+</main>

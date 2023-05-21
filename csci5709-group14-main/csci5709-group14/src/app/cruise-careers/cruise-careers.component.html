@@ -1,0 +1,85 @@
+<!-- Author: Akash Gupta - B00912118 - ak459448@dal.ca -->
+
+<html>
+
+<head> </head>
+
+<div class="jobSearch">
+<div class="jobSearchDiv">
+<form class="example-form" (ngSubmit)="onSubmit()">
+	<mat-form-field style="height: 98px;" class="example-full-width-1" appearance="fill">
+		<img style="height: 25px;" src="../../assets/images/location.png" alt="" />
+		<input type="text" name="jobs" [(ngModel)]="job" placeholder="Job Title" matInput [formControl]="jobControl"
+			[matAutocomplete]="auto" />
+		<mat-autocomplete #auto="matAutocomplete">
+			<mat-option *ngFor="let jobOption of filteredJob | async" [value]="jobOption">
+				{{ jobOption }}
+			</mat-option>
+		</mat-autocomplete>
+	</mat-form-field>
+	<mat-form-field style="height: 98px;" class="example-full-width-2" appearance="fill">
+		<img style="height: 25px;" src="../../assets/images/search.png" alt="" />
+		<input type="text" name="locations" [(ngModel)]="location" placeholder="Job Location" matInput
+			[formControl]="locationControl" [matAutocomplete]="autoLocation" />
+		<mat-autocomplete #autoLocation="matAutocomplete">
+			<mat-option *ngFor="let locationOption of filteredLocation | async" [value]="locationOption">
+				{{ locationOption }}
+			</mat-option>
+		</mat-autocomplete>
+	</mat-form-field>
+	<button class="btn btn-primary" p-100 type="submit" style="
+				font-size: 149%;
+				margin-top: 1%;
+				margin-left: 3%;
+				height: 71px;
+				width: 17%;
+			">
+		Search
+	</button>
+</form>
+</div>
+</div>
+
+<div class="count">
+	<h2>{{ totalFoundJob }} Jobs found</h2>
+</div>
+
+<div class="jobTable">
+	<table>
+		<tbody>
+			<div class="row">
+				<div class="column left">
+					<div class="jumbotron">
+						<h1>Current Job Opening !!</h1>
+						<h2>
+						{{currentJobOpening}}
+						</h2>
+					</div>
+				</div>
+				<div class="column center">
+					<div *ngIf="totalFoundJob == 0" class="noRecord">
+						<h1>{{noJobFound}}</h1>
+						<img src="../../assets/images/No-Data.png" class="d-block w-100" alt="..." />
+					</div>
+					<tr *ngFor="let job of carrersList">
+						<div class="column center">
+							<img [src]="job.company_logo" class="d-block w-100" alt="..." />
+						</div>
+						<div class="column right">
+							<h2>{{ job.title }}</h2>
+							<p>{{ job.company_name }}</p>
+							<p>{{ job.location }}</p>
+							<p>5 days ago</p>
+							<div class="align-job">
+								<a class="btn btn-primary" (click)="apply(job)" routerLink="/jobdetails"
+									role="button">Apply</a>
+							</div>
+						</div>
+					</tr>
+				</div>
+			</div>
+		</tbody>
+	</table>
+</div>
+
+</html>

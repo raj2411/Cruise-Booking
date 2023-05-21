@@ -1,0 +1,110 @@
+/*Author: Karan Aggarwal (B00912580) */
+.bg {
+    background-image: url('../../assets/images/lease_bg.jpg');
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+}
+
+.editlease {
+	color: rgba(255, 255, 255, 0.704);
+    background-color: rgba(3, 13, 17, 0.718);
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+    box-shadow:0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+	padding-top: 1%;
+	padding-bottom: 2%;
+	padding-left: 2%;
+	padding-right: 2%;
+	font-family: 'Lorem Ipsum';
+	max-width: 80%;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2px;
+	width: 90%;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0.15);
+}
+
+.leaseform {
+	color: rgba(255, 255, 255, 0.704);
+    background-color: rgba(3, 13, 17, 0.718);
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+    box-shadow:0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+	padding: 2%;
+	font-family: 'Lorem Ipsum';
+	max-width: 80%;
+	width: 90%;
+	margin: 0 auto;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0.15);
+}
+
+h1 {
+	font-size: xx-large;
+	text-align: center;
+}
+
+label {
+	padding-right: 10px;
+	font-size: x-large;
+}
+input {
+	font-size: large;
+	height: 30px;
+	width: 50vw;
+	border-radius: 5%;
+}
+
+.prebutton {
+    background: #05a7f2;
+    border: 1px solid #05a7f2;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF; 
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10%;
+	margin-left: 10px;
+}
+
+.submit {
+    background: #05a7f2;
+    border: 1px solid #05a7f2;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF; 
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+.cancel {
+    background: #f20505;
+    border: 1px solid #05a7f2;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF; 
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10%;
+	margin-left: 40px;
+}

@@ -1,0 +1,27 @@
+<div class="booking-confirmed">
+	<h1 class="center">Booking Confirmed</h1>
+	<div class="personal-information">
+		<h2>Personal Information</h2>
+		<p>Name: {{ booking?.personalInformation.Name }}</p>
+		<p>Date of Birth: {{ booking?.personalInformation.DOB }}</p>
+		<p>Email: {{ booking?.personalInformation.Email }}</p>
+		<p>Phone Number: {{ booking?.personalInformation.PhoneNumber }}</p>
+		<p>Address: {{ booking?.personalInformation.Address }}</p>
+	</div>
+	<div class="booking-information">
+		<h2>Booking Information</h2>
+		<p>Name: {{ booking?.rentBookingInformation.cruisename }}</p>
+		<p>Cruise ID: {{ booking?.rentBookingInformation.cruiseid }}</p>
+		<p>rooms: {{ booking?.rentBookingInformation.rooms }}</p>
+		<p>Base Amount: {{ booking?.rentBookingInformation.base_amount }}</p>
+		<p>Tax Amount: {{ booking?.rentBookingInformation.tax_amount }}</p>
+		<p>Total Amount: {{ booking?.rentBookingInformation.total_amount }}</p>
+	</div>
+	<!-- <div class="card-information" *ngIf="booking?.cardInformation.cardnumber">
+      <h2>Card Information</h2>
+      <p>Card Number: {{booking?.cardInformation.cardnumber}}</p>
+      <p>Name on Card: {{booking?.cardInformation.name}}</p>
+      <p>Expiration Date: {{booking?.cardInformation.expiration}}</p>
+      <p>CVV: {{booking?.cardInformation.cvv}}</p>
+  </div> -->
+</div>

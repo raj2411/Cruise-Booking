@@ -1,0 +1,116 @@
+<!-- // Author: Harsh Vaghani - B00923828 - harsh.vaghani@dal.ca -->
+
+<div class="body">
+	<mat-card>
+		<mat-card-content>
+			<div *ngIf="false" class="alert alert-success" role="alert">
+				<h4 class="alert-heading">Login Successful!!</h4>
+				<p>Get ready for an awesome trip!</p>
+			</div>
+			<div class="header">Login</div>
+			<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+				<div class="input-div">
+					<mat-form-field class="full-width" appearance="outline">
+						<mat-label>Email</mat-label>
+						<input
+							formControlName="email"
+							matInput
+							required
+							email
+						/>
+						<mat-error
+							class="error"
+							*ngIf="
+								submitted && loginForm.controls['email'].errors
+							"
+						>
+							<div
+								*ngIf="
+									loginForm.controls['email'].errors.required
+								"
+							>
+								Email is required.
+							</div>
+							<div
+								*ngIf="loginForm.controls['email'].errors.email"
+							>
+								Email must be in a valid format.
+							</div>
+						</mat-error>
+					</mat-form-field>
+				</div>
+				<div class="input-div">
+					<mat-form-field class="full-width" appearance="outline">
+						<mat-label>Password</mat-label>
+						<input
+							formControlName="password"
+							matInput
+							[type]="hide ? 'text' : 'password'"
+							required
+						/>
+						<button
+							mat-icon-button
+							type="button"
+							matSuffix
+							(click)="hide = !hide"
+							[attr.aria-label]="'Hide Password'"
+							[attr.aira-pressed]="!hide"
+						>
+							<mat-icon style="color: white">
+								{{ hide ? 'visibility' : 'visibility_off' }}
+							</mat-icon>
+						</button>
+						<mat-error
+							class="error"
+							*ngIf="
+								submitted &&
+								loginForm.controls['password'].errors
+							"
+						>
+							<div
+								*ngIf="
+									loginForm.controls['password'].errors
+										.required
+								"
+							>
+								Password is required.
+							</div>
+							<div
+								*ngIf="
+									loginForm.controls['password'].errors
+										.minlength
+								"
+							>
+								Password must be at least 8 characters.
+							</div>
+							<div
+								*ngIf="
+									loginForm.controls['password'].errors
+										.pattern
+								"
+							>
+								Password must contain alpha-numeric and special
+								characters.
+							</div>
+						</mat-error>
+					</mat-form-field>
+				</div>
+				<div class="button-container">
+					<button
+						onclick=""
+						mat-flat-button
+						type="submit"
+						class="button"
+						color="primary"
+					>
+						<mat-icon> login </mat-icon>
+						Login
+					</button>
+					<a [routerLink]="['/signup']" class="aLink"
+						>Don't have account?</a
+					>
+				</div>
+			</form>
+		</mat-card-content>
+	</mat-card>
+</div>

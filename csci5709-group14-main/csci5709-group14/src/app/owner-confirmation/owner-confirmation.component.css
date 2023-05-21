@@ -1,0 +1,20 @@
+/*Author: Karan Aggarwal (B00912580) */
+
+.maindiv{
+    height: 100%;
+    background-image: url('../../assets/images/cruiselease.jpg');
+    background-position: center;
+    background-size: cover;
+}
+section{
+    font-family:'Lorem Ipsum';
+    max-width: 80%;
+    width:90%;
+    margin: 0 auto;
+    padding: 15%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.704);
+    background-color: rgba(3, 13, 17, 0.718);
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+    box-shadow:0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+}

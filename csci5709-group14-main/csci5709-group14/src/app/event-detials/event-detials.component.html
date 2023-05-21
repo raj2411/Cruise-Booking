@@ -1,0 +1,23 @@
+<!-- // Author: Harsh Vaghani - B00923828 - harsh.vaghani@dal.ca -->
+
+<div class="event-detail-container">
+	<img style="height: 400px" [src]="eventDetail.events.event.image" alt="" />
+	<h1 style="margin-top: 3%">{{ eventDetail.events.event.name }}</h1>
+	<div class="event-location-date">
+		<p>{{ eventDetail.events.event.location }}</p>
+		<p>
+			{{ eventDetail.events.event.date | date : 'fullDate' }} at
+			{{ eventDetail.events.event.time }}
+		</p>
+	</div>
+	<p>{{ eventDetail.events.event.description }}</p>
+	<div class="contact-details">
+		<p class="contact-title">Contact Information</p>
+		<p>
+			Contact: {{ eventDetail.events.contactDetails.firstName }}
+			{{ eventDetail.events.contactDetails.lastName }}
+		</p>
+		<p>Email: {{ eventDetail.events.contactDetails.email }}</p>
+		<p>Phone: {{ eventDetail.events.contactDetails.phone }}</p>
+	</div>
+</div>

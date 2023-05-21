@@ -1,0 +1,32 @@
+/* Author: Akash Gupta - B00912118 - ak459448@dal.ca */
+
+.alert
+{
+    width: 84%;
+}
+.form-control
+{
+    width: 135%;
+}
+
+  .left {
+    margin-left: 7%;
+    margin-top: 2%;
+    width: 50%;
+  }
+
+
+  .right {
+    padding: 10px;
+    float: right;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  @media all and (max-width:1118px)
+ {
+    .form-control {
+     width: 100%;
+   }
+ }

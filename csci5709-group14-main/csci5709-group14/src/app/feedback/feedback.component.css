@@ -1,0 +1,58 @@
+/*Author: Karan Aggarwal (B00912580) */
+
+.maindiv{
+    height: 100%;
+    background-image: url('https://images.rawpixel.com/image_1300/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL2ZsNDc5NzM5NjkwMDYtaW1hZ2Uta3ljaXZxejUuanBn.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.feedbackform{
+    font-family:'Lorem Ipsum';
+    max-width: 80%;
+    width:90%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.704);
+    background-color: rgba(3, 13, 17, 0.718);
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+    box-shadow:0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1{
+    font-size:xx-large;
+    text-align: center;
+}
+
+label{
+    padding-right:10px;
+    font-size:x-large;
+}
+input{
+    font-size: large;
+    height: 30px;
+    width:50vw;
+    border-radius: 5%;
+}
+
+textarea{
+    font-size: large;
+    height: 80px;
+    width:50vw;
+}
+
+.submit{
+    background: #05a7f2;
+    border: 1px solid #05a7f2;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF; 
+    color: white;
+    padding: 7px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10%;
+}

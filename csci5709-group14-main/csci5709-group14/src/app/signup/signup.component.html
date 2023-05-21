@@ -1,0 +1,217 @@
+<!-- // Author: Harsh Vaghani - B00923828 - harsh.vaghani@dal.ca -->
+
+<div class="body">
+	<mat-card>
+		<mat-card-content>
+			<div *ngIf="false" class="alert alert-success" role="alert">
+				<h4 class="alert-heading">Registered Successful!!</h4>
+				<p>Get ready for an awesome trip!</p>
+			</div>
+			<div class="header">Sign Up</div>
+			<form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+				<div class="input-div">
+					<mat-form-field class="full-width" appearance="outline">
+						<mat-label>First Name</mat-label>
+						<input formControlName="firstName" matInput required />
+						<mat-error
+							class="error"
+							*ngIf="
+								submitted &&
+								signupForm.controls['firstName'].errors
+							"
+						>
+							<div
+								*ngIf="
+									signupForm.controls['firstName'].errors
+										.required
+								"
+							>
+								First name is required.
+							</div>
+							<div
+								*ngIf="
+									signupForm.controls['firstName'].errors
+										.pattern
+								"
+							>
+								First name must only contain letters.
+							</div>
+						</mat-error>
+					</mat-form-field>
+				</div>
+
+				<div class="input-div">
+					<mat-form-field class="full-width" appearance="outline">
+						<mat-label>Last Name</mat-label>
+						<input formControlName="lastName" matInput required />
+						<mat-error
+							class="error"
+							*ngIf="
+								submitted &&
+								signupForm.controls['lastName'].errors
+							"
+						>
+							<div
+								*ngIf="
+									signupForm.controls['lastName'].errors
+										.required
+								"
+							>
+								Last name is required.
+							</div>
+							<div
+								*ngIf="
+									signupForm.controls['lastName'].errors
+										.pattern
+								"
+							>
+								Last name must only contain letters.
+							</div>
+						</mat-error>
+					</mat-form-field>
+				</div>
+
+				<div class="input-div">
+					<mat-form-field class="full-width" appearance="outline">
+						<mat-label>Email</mat-label>
+						<input
+							formControlName="email"
+							matInput
+							required
+							email
+						/>
+						<mat-error
+							class="error"
+							*ngIf="
+								submitted && signupForm.controls['email'].errors
+							"
+						>
+							<div
+								*ngIf="
+									signupForm.controls['email'].errors.required
+								"
+							>
+								Email is required.
+							</div>
+							<div
+								*ngIf="
+									signupForm.controls['email'].errors.email
+								"
+							>
+								Email must be in a valid format.
+							</div>
+						</mat-error>
+					</mat-form-field>
+				</div>
+
+				<div class="input-div">
+					<mat-form-field class="full-width" appearance="outline">
+						<mat-label>Password</mat-label>
+						<input
+							formControlName="password"
+							matInput
+							required
+							[type]="hide ? 'text' : 'password'"
+						/>
+						<button
+							mat-icon-button
+							type="button"
+							matSuffix
+							(click)="hide = !hide"
+							[attr.aria-label]="'Hide Password'"
+							[attr.aira-pressed]="!hide"
+						>
+							<mat-icon style="color: white">
+								{{ hide ? 'visibility' : 'visibility_off' }}
+							</mat-icon>
+						</button>
+						<mat-error
+							class="error"
+							*ngIf="
+								submitted &&
+								signupForm.controls['password'].errors
+							"
+						>
+							<div
+								*ngIf="
+									signupForm.controls['password'].errors
+										.required
+								"
+							>
+								Password is required.
+							</div>
+							<div
+								*ngIf="
+									signupForm.controls['password'].errors
+										.minlength
+								"
+							>
+								Password must be at least 8 characters.
+							</div>
+							<div
+								*ngIf="
+									signupForm.controls['password'].errors
+										.pattern
+								"
+							>
+								Password must contain alpha-numeric and special
+								characters.
+							</div>
+						</mat-error>
+					</mat-form-field>
+				</div>
+
+				<div class="input-div">
+					<mat-form-field class="full-width" appearance="outline">
+						<mat-label>Confirm Password</mat-label>
+						<input
+							id="confirmPassword"
+							formControlName="confirmPassword"
+							matInput
+							required
+							type="password"
+						/>
+						<mat-error
+							class="error"
+							*ngIf="
+								submitted &&
+								signupForm.controls['confirmPassword'].errors
+							"
+						>
+							<div
+								*ngIf="
+									signupForm.controls['confirmPassword']
+										.errors.required
+								"
+							>
+								Confirm password is required.
+							</div>
+							<div
+								*ngIf="
+									signupForm.controls['confirmPassword']
+										.errors.mustMatch
+								"
+							>
+								Passwords do not match.
+							</div>
+						</mat-error>
+					</mat-form-field>
+				</div>
+				<div>
+					<button
+						mat-flat-button
+						type="submit"
+						class="button"
+						color="primary"
+					>
+						Sign Up
+					</button>
+					<a [routerLink]="['/login']" class="aLink"
+						>Already have account?</a
+					>
+				</div>
+			</form>
+		</mat-card-content>
+	</mat-card>
+	<router-outlet> </router-outlet>
+</div>

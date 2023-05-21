@@ -1,0 +1,199 @@
+<!-- Author: Karan Aggarwal (B00912580) -->
+<div class="bg">
+</div>
+	<section class="editlease">
+		<form #form="ngForm" (ngSubmit)="onSubmitlease()">
+			<h2>Reschedule or Cancel</h2>
+			<label>Cruise ID </label>
+			<input
+				placeholder="Please enter cruise ID"
+				name="id"
+				required
+				[(ngModel)]="id"
+				(keypress)="checkAlphanumeric($event)"
+			/>
+			<button type="submit" class="prebutton">Submit</button>
+			<p style="color: red" *ngIf="this.id.length < 1 && idfilled">{{cruiseiderror}}</p>
+		</form>
+	</section>
+	
+	<section class="leaseform">
+		<h1>New Cruise Registration</h1>
+		<h2>Please enter cruise details</h2>
+		<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+			<label> Cruise Name </label><br />
+			<input
+				[disabled]="disablebox"
+				name="cruisename"
+				ngModel
+				required
+				[(ngModel)]="cruisename"
+				(keypress)="checkAlpha($event)"
+			/>
+			<p style="color: red" *ngIf="cruisename.length < 1 && formfilled">
+				Please enter the Cruise Name.
+			</p>
+			<br /><br />
+	
+			<label> Cruise Manufacturing Year </label><br />
+			<input
+				[disabled]="disablebox"
+				name="year"
+				ngModel
+				required
+				[(ngModel)]="year"
+				(keypress)="checkNumeric($event)"
+				maxlength="4"
+			/>
+			<p style="color: red" *ngIf="year.length != 4 && formfilled">
+				Please enter the Manufacturing year (YYYY).
+			</p>
+			<br /><br />
+	
+			<label> Cruise Model Number </label><br />
+			<input
+				[disabled]="disablebox"
+				name="model"
+				ngModel
+				required
+				[(ngModel)]="model"
+				(keypress)="checkAlphanumeric($event)"
+			/>
+			<p style="color: red" *ngIf="model.length < 1 && formfilled">
+				Please the Cruise Model Number.
+			</p>
+			<br /><br />
+	
+			<label> Cruise Capacity </label><br />
+			<input
+				[disabled]="disablebox"
+				name="capacity"
+				ngModel
+				required
+				[(ngModel)]="capacity"
+				(keypress)="checkNumeric($event)"
+			/>
+			<p style="color: red" *ngIf="capacity < 1 && formfilled">
+				Please enter the Cruise capacity.
+			</p>
+			<br /><br />
+	
+			<label> Number of Rooms available </label><br />
+			<input
+				[disabled]="disablebox"
+				name="rooms"
+				ngModel
+				required
+				[(ngModel)]="rooms"
+				(keypress)="checkNumeric($event)"
+			/>
+			<p style="color: red" *ngIf="rooms < 1 && formfilled">
+				Please enter number of rooms in cruise.
+			</p>
+			<br /><br />
+	
+			<label> Period of time is available for </label><br />
+			<input
+				type="date"
+				name="fromavailability"
+				ngModel
+				required
+				[(ngModel)]="fromavailability"
+				min="2023-03-11"
+			/>
+			<br /><br />
+			<input
+				type="date"
+				name="toavailability"
+				ngModel
+				required
+				[(ngModel)]="toavailability"
+				min="2023-03-15"
+			/>
+			<p style="color: red" *ngIf="fromavailability.length < 1 && formfilled">
+				Please enter the from availability date.
+			</p>
+			<p style="color: red" *ngIf="toavailability.length < 1 && formfilled">
+				Please enter the to availability date.
+			</p>
+			<br /><br />
+	
+			<h2>Please enter personal details</h2>
+			<label> First Name </label><br />
+			<input
+				 [disabled]="disablebox"
+				name="firstname"
+				ngModel
+				required
+				[(ngModel)]="firstname"
+				(keypress)="checkAlpha($event)"
+			/>
+			<p style="color: red" *ngIf="firstname.length < 1 && formfilled">
+				Please enter your first Name.
+			</p>
+			<br />
+			<br />
+	
+			<label> Last Name </label><br />
+			<input
+				[disabled]="disablebox"
+				name="lastname"
+				ngModel
+				required
+				[(ngModel)]="lastname"
+				(keypress)="checkAlpha($event)"
+			/>
+			<p style="color: red" *ngIf="lastname.length < 1 && formfilled">
+				Please enter your Last Name.
+			</p>
+			<br /><br />
+	
+			<label> Email Address </label><br />
+			<input name="first" ngModel required [(ngModel)]="email" [disabled]="disablebox"/>
+			<p style="color: red" *ngIf="email.length < 1 && formfilled">
+				Please enter your email address.
+			</p>
+			<br /><br />
+	
+			<label> Phone Number </label><br />
+			<input
+				[disabled]="disablebox"
+				name="phone"
+				ngModel
+				required
+				[(ngModel)]="phone"
+				(keypress)="checkNumeric($event)"
+			/>
+			<p style="color: red" *ngIf="phone.length < 1 && formfilled">
+				Please enter your phone number.
+			</p>
+			<br /><br />
+	
+			<label> Business Company Name </label><br />
+			<input
+				[disabled]="disablebox"
+				name="companyname"
+				ngModel
+				[(ngModel)]="companyname"
+				(keypress)="checkAlphanumeric($event)"
+			/><br /><br />
+			<label> Business Registration Number </label><br />
+			<input
+				[disabled]="disablebox"
+				name="rnumber"
+				ngModel
+				required
+				[(ngModel)]="rnumber"
+				(keypress)="checkAlphanumeric($event)"
+			/><br /><br />
+			<button class="submit" type="submit">Submit</button>
+			<button
+				class="cancel"
+				type="button"
+				(click)="onCancel()"
+				*ngIf="id"
+			>
+				Delete</button
+			><br />
+		</form>
+	</section>

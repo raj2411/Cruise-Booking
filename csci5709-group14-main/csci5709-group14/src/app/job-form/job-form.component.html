@@ -1,0 +1,118 @@
+<!-- Author: Akash Gupta - B00912118 - ak459448@dal.ca -->
+
+<div class="class" style="float: right; margin-right: 1%; margin-top: 1%">
+	<button type="button" (click)="closeModal()" style="background-color: #dc143c">
+		X
+	</button>
+</div>
+
+<div class="heading" style="background-color: #e3f2fd">
+	<h1 style="font-size: 260%" style="
+			margin-left: 35%;
+			height: 60px;
+			font-weight: bolder;
+			font-size: 257%;
+		">
+		Job Application Form
+	</h1>
+</div>
+<div *ngIf="jobformsuccess" class="alert alert-success" role="alert"
+	style="margin-top: 3%; margin-left: 2%; width: 97%">
+	Congratulations! Your job application is successfully submitted
+</div>
+
+<div class="row">
+	<div class="column left shadow-lg p-1 mb-2 bg-white rounded">
+		<form *ngIf="!jobformsuccess" [formGroup]="requiredForm" (ngSubmit)="formSubmit()"
+			style="margin-left: 22%; margin-top: 4%">
+			<div class="form-group">
+				<label class="center-block">First Name:
+					<input class="form-control" formControlName="Firstname" />
+				</label>
+				<div *ngIf="Firstname.errors?.['pattern']" class="alert alert-danger">
+					First Name should be letters.
+				</div>
+				<div *ngIf="Firstname.errors?.['required'] && formSubmitted" class="alert alert-danger">
+					First name is required
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="center-block">Last Name:
+					<input class="form-control" formControlName="Lastname" />
+				</label>
+				<div *ngIf="Lastname.errors?.['pattern']" class="alert alert-danger">
+					Last Name should be only in letters
+				</div>
+				<div *ngIf="Lastname.errors?.['required'] && formSubmitted" class="alert alert-danger">
+					Last name is required
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="center-block">Email:
+					<input class="form-control" formControlName="Email" />
+				</label>
+				<div *ngIf="Email.errors?.['pattern']" class="alert alert-danger">
+					Email format is not correct
+				</div>
+				<div *ngIf="Email.errors?.['required'] && formSubmitted" class="alert alert-danger">
+					Email is required
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="center-block">Contact Number:
+					<input class="form-control" formControlName="Contact" />
+				</label>
+				<div *ngIf="Contact.errors?.['pattern']" class="alert alert-danger">
+					Contact number can only be numbers
+				</div>
+				<div *ngIf="Contact.errors?.['required'] && formSubmitted" class="alert alert-danger">
+					Email is required
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="center-block">Address:
+					<input class="form-control" type="text" formControlName="Address" />
+				</label>
+				<div *ngIf="Address.errors?.['required'] && formSubmitted" class="alert alert-danger">
+					Address is required
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="form-label" for="customFile">upload the resume</label>
+				<input type="file" class="form-control" formControlName="fileupload" style="width: 85%" />
+				<div *ngIf="fileupload.errors?.['required'] && formSubmitted" style="margin-top: 2%"
+					class="alert alert-danger">
+					Please upload the resume
+				</div>
+			</div>
+
+			<div class="submitbtn" style="margin-top: 4%; margin-left: 10%">
+				<button class="btn btn-primary" type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
+	<div *ngIf="!jobformsuccess" class="shadow-lg p-3 mb-5 bg-white rounded column right"
+		style="background-color: whitesmoke; width: 23%; height: 50%">
+		<h2>Company</h2>
+		<h3 style="background-color: lightskyblue">
+			{{ jobdetails.company_name }}
+		</h3>
+		<hr style="background-color: black; width: 100%" />
+		<h2>Job Title</h2>
+		<h3 style="background-color: lightskyblue">{{ jobdetails.title }}</h3>
+		<hr style="background-color: black; width: 100%" />
+		<h2>Job location</h2>
+		<h3 style="background-color: lightskyblue">
+			{{ jobdetails.location }}
+		</h3>
+		<hr style="background-color: black; width: 100%" />
+		<h2>Job type</h2>
+		<h3 style="background-color: lightskyblue">{{ jobdetails.type }}</h3>
+		<hr style="background-color: black; width: 100%" />
+	</div>
+</div>

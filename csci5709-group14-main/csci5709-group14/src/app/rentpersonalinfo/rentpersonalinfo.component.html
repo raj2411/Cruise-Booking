@@ -1,0 +1,89 @@
+<div class="maindiv">
+	<div class="personalinfo">
+		<div class="left">
+			<h1>Personal Information</h1>
+			<h2>Please enter your details</h2>
+			<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+				<label> Name </label><br />
+				<input
+					name="name"
+					ngModel
+					required
+					[(ngModel)]="personalInformation.Name"
+					(keypress)="checkAlpha($event)"
+				/>
+				<p style="color: red" *ngIf="nameFail">
+					Please enter your Name.
+				</p>
+				<br /><br />
+
+				<label> Date of Birth </label><br />
+				<input
+					type="date"
+					name="dob"
+					ngModel
+					required
+					[(ngModel)]="personalInformation.DOB"
+					min="1970-01-01"
+				/>
+				<br /><br />
+				<p style="color: red" *ngIf="dobFail">
+					Please enter the date of Birth.
+				</p>
+
+				<h2>Please enter contact details</h2>
+
+				<label> Email Address </label><br />
+				<input name="first" ngModel required [(ngModel)]="personalInformation.Email"/>
+				<p style="color: red" *ngIf="emailFail">
+					Please enter your email address.
+				</p>
+				<br /><br />
+
+				<label> Phone Number </label><br />
+				<input
+					name="phone"
+					ngModel
+					required
+					[(ngModel)]="personalInformation.PhoneNumber"
+					(keypress)="checkNumeric($event)"
+				/>
+				<p style="color: red" *ngIf="phoneFail">
+					Please enter your phone number.
+				</p>
+				<br /><br />
+
+				<label> Address </label><br />
+				<input
+					name="address"
+					ngModel
+					required
+					[(ngModel)]="personalInformation.Address"
+					(keypress)="checkNumeric($event)"
+					maxlength="100"
+				/>
+				<p style="color: red" *ngIf="addressFail">
+					Please enter the Address.
+				</p>
+				<br /><br />
+
+				<button class="submit" type="submit">Submit</button>
+				<button class="cancel" type="button" [routerLink]="['/cruisedetails', cruise._id]">Cancel</button><br />
+			</form>
+		</div>
+		<div class="right">
+			<div class="details">
+				<h1>Your booking details</h1>
+				<p><strong>Cruise Name: </strong> {{cruise.cruisename}}</p>
+				<!--p><strong>Description: </strong> {{suiteDetails.details}}</p-->
+				<p class="price"><strong>Cost: </strong> CAD {{cruise?.rooms * 500}}</p>
+				<p class="price"><strong>Tax: </strong> CAD {{cruise?.rooms * 75 }}</p>
+				<p class="price">------------------------</p>
+				<p class="price"><strong>Total: </strong> CAD {{+cruise?.rooms * 500 + +cruise?.rooms * 75}}</p>
+			</div>
+			<button class="modify" type="button" [routerLink]="['/cruisedetails', cruise?._id]">Modify Booking</button>
+		</div>
+	</div>
+</div>
+
+

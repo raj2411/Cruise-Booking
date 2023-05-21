@@ -1,0 +1,48 @@
+<!-- // Author: Harsh Vaghani - B00923828 - harsh.vaghani@dal.ca -->
+
+<mat-toolbar color="primary" class="mat-elevation-z6">
+	<div class="icon-container">
+		<mat-icon>directions_boat</mat-icon>
+
+		<a mat-button color="primary" class="nav-buttons heading" routerLink="/"
+			>HFX Cruise</a
+		>
+	</div>
+
+	<!-- <span class="nav-spacer"></span> -->
+	<div class="nav-items">
+		<a
+			mat-button
+			color="primary"
+			class="nav-buttons"
+			routerLink="packagelist"
+			>Packages</a
+		>
+		<a mat-button color="primary" class="nav-buttons" routerLink="rent">Rent Your Cruise</a>
+		<a mat-button color="primary" class="nav-buttons" routerLink="event"
+			>Events</a
+		>
+		<a
+			mat-button
+			color="primary"
+			class="nav-buttons"
+			routerLink="login"
+			*ngIf="!isUserAuthenticated"
+			>Login</a
+		>
+		<ng-container *ngIf="isUserAuthenticated">
+			<button
+				mat-button
+				color="primary"
+				class="nav-buttons"
+				[matMenuTriggerFor]="userMenu"
+			>
+				User
+			</button>
+			<mat-menu #userMenu="matMenu">
+				<button mat-menu-item (click)="goToProfile()">Profile</button>
+				<button mat-menu-item (click)="logout()">Logout</button>
+			</mat-menu>
+		</ng-container>
+	</div>
+</mat-toolbar>

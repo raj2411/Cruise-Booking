@@ -1,0 +1,80 @@
+<!-- Author: Karan Aggarwal (B00912580) -->
+<!-- Author: Krina Mistry - B00927702 kr981143@dal.ca
+Have done some changes related to backend  -->
+
+<div class="maindiv">
+	<div class="paymentform">
+		<div class="left">
+			<h1>Payment Information</h1>
+			<h2>Please enter your card details</h2>
+			<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+				<label> Card Number </label><br />
+				<input
+					placeholder="XXXX-XXXX-XXXX-XXXX"
+					name="cardnumber"
+					ngModel
+					required
+					[(ngModel)]="cardnumber"
+					(keypress)="checkNumeric($event)"
+					maxlength="16"
+				/>
+				<p style="color: red" *ngIf="cardnumberFail">
+					Please enter your Card Number.
+				</p>
+				<br /><br />
+
+				<label> Name on Card </label><br />
+				<input
+					placeholder="Name on Card"
+					name="name"
+					ngModel
+					required
+					[(ngModel)]="name"
+					(keypress)="checkAlpha($event)"
+				/>
+				<p style="color: red" *ngIf="nameFail">
+					Please enter the name on card.
+				</p>
+				<br /><br />
+
+				<label> Expiration </label><br />
+				<input
+					type="month"
+					name="fromavailability"
+					ngModel
+					required
+					[(ngModel)]="expdate"
+					min="2023-03-11"
+				/>
+				<br /><br />
+				<p style="color: red" *ngIf="expdateFail">
+					Please enter the Expiry date.
+				</p>
+
+				<label> CVV Code </label><br />
+				<input
+					placeholder="CVV Code"
+					name="cvv"
+					ngModel
+					required
+					[(ngModel)]="cvv"
+					(keypress)="checkNumeric($event)"
+				/>
+				<p style="color: red" *ngIf="cvvFail">
+					Please enter the CVV code.
+				</p>
+				<br /><br />
+
+				<button class="submit" type="submit">Submit</button>
+				<button class="cancel" type="button">Cancel</button><br />
+			</form>
+		</div>
+		<div class="right">
+			<img
+				src="https://svgsilh.com/png/1300155-3f51b5.png"
+				width="500"
+				height="300"
+			/>
+		</div>
+	</div>
+</div>

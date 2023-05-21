@@ -1,0 +1,47 @@
+<!-- Author: Akash Gupta - B00912118 - ak459448@dal.ca -->
+
+<main>
+	<div class="row">
+		<div class="column center">
+			<img src="{{ JobDetails.company_logo }}" class="d-block w-100" alt="..." />
+		</div>
+		<div class="column right">
+			<h2>{{ JobDetails.title }}</h2>
+			<p>{{ JobDetails.company_name }}</p>
+			<p>{{ JobDetails.location }}</p>
+			<p>{{ JobDetails.days }}</p>
+			<div class="align-job">
+				<a class="btn btn-primary" (click)="openModal()" role="button">Apply</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="details">
+		<div class="about">
+			<h1>About the Company</h1>
+		</div>
+		<div class="jobDetailsDesc">
+			<div class="aboutDescription">
+				<p>{{ JobDetails.about }}</p>
+			</div>
+			<div class="posRepon">
+				<h1>Position and Responsibilities</h1>
+			</div>
+			<div class="posReponDescription">
+				<p>{{ JobDetails.responsibility }}</p>
+			</div>
+			<div class="qualification">
+				<h1>Qualification</h1>
+			</div>
+			<div class="qualificationDescrip">
+				<p>{{ JobDetails.qualification }}</p>
+			</div>
+			<div class="perks">
+				<h1>Perks</h1>
+			</div>
+			<div class="perksDescription">
+				<p>{{ JobDetails.perks }}</p>
+			</div>
+		</div>
+	</div>
+</main>

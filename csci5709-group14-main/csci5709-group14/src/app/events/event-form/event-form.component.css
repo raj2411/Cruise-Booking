@@ -1,0 +1,90 @@
+/* // Author: Harsh Vaghani - B00923828 - harsh.vaghani@dal.ca */
+
+.form {
+	margin: 20px;
+	padding: 20px 10px 10px 80px;
+	box-shadow: 0 0 10px #333333;
+	border-radius: 10px;
+	background-color: white;
+	height: auto;
+}
+
+h1,
+h2 {
+	margin: 10px;
+}
+
+.form-fields {
+	padding: 10px 0px 0px;
+	display: flex;
+	flex-direction: column;
+}
+
+.form-stepper {
+	width: 80%;
+}
+
+.submit-button {
+	background-color: #3f51b5;
+	color: white !important;
+	border-radius: 1000px;
+}
+
+.submit-button:hover {
+	color: #3f51b5 !important;
+	background-color: white;
+	border: #3f51b5 1px solid;
+}
+
+.form-buttons {
+	color: #3f51b5 !important;
+	background-color: white;
+	border: #3f51b5 1px solid;
+	border-radius: 1000px;
+	margin-right: 10px;
+}
+
+.form-buttons:hover {
+	background-color: #3f51b5 !important;
+	color: white !important;
+}
+
+.highlight-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.highlight-input {
+	flex: 1;
+}
+
+.delete-button {
+	margin-left: 10px;
+}
+
+.add-highlight-button {
+	margin-top: 10px;
+	background-color: #3f51b5;
+	color: white;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.add-highlight-button:hover {
+	background-color: #283593;
+	color: white;
+}
+
+@media (max-width: 1000px) {
+	.form {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		flex-direction: column;
+		padding: 20px 0%;
+	}
+}

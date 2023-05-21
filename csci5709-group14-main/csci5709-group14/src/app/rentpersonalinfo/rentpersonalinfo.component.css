@@ -1,0 +1,95 @@
+.maindiv {
+	height: 100%;
+	background-image: url('https://images.rawpixel.com/image_1300/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvaXMxNDcwOS1pbWFnZS1rd3Z3dDFrcS5qcGc.jpg');
+	background-position: center;
+	background-size: cover;
+}
+.personalinfo {
+	overflow: hidden;
+	padding: 2%;
+	font-family: 'Lorem Ipsum';
+	max-width: 80%;
+	margin: 2px auto;
+	color: rgba(255, 255, 255, 0.704);
+	background-color: rgba(3, 13, 17, 0.718);
+	-webkit-box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+	font-size: xx-large;
+	text-align: center;
+}
+
+label {
+	padding-right: 10px;
+	font-size: x-large;
+}
+input {
+	font-size: large;
+	height: 30px;
+	width: 30vw;
+	border-radius: 5%;
+}
+
+.left {
+	float: left;
+	width: 60%;
+}
+.right {
+	font-size: x-large;
+	float: right;
+	width: 40%;
+}
+.details {
+	margin: 10px;
+	padding: 2%;
+	overflow: hidden;
+	background-color: white;
+	color: black;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0.15);
+}
+.price {
+	margin-left: 50%;
+}
+.submit {
+	background: #05a7f2;
+	background: #05a7f2;
+	border-radius: 6px;
+	box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+	box-sizing: border-box;
+	color: #ffffff;
+	padding: 7px 32px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.cancel {
+	background: #ff4742;
+	border: 1px solid #ff4742;
+	border-radius: 6px;
+	box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+	box-sizing: border-box;
+	color: #ffffff;
+	padding: 7px 32px;
+	text-align: center;
+	font-size: 16px;
+	cursor: pointer;
+	margin-left: 40px;
+}
+
+.modify {
+	background: #05a7f2;
+	background: #05a7f2;
+	border-radius: 6px;
+	box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+	box-sizing: border-box;
+	color: #ffffff;
+	color: white;
+	padding: 7px 32px;
+	text-align: right;
+	margin-left: 30%;
+	font-size: 16px;
+	cursor: pointer;
+}

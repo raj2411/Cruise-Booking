@@ -1,0 +1,156 @@
+/* // Author: Harsh Vaghani - B00923828 - harsh.vaghani@dal.ca */
+
+footer {
+	background-color: #3f51b5;
+	padding: 40px 0;
+	bottom: 0;
+	width: 100%;
+	color: #fff;
+}
+
+.mat-elevation-z2 {
+	position: relative;
+}
+
+.footer {
+	background-color: #343a40;
+	color: #fff;
+	padding: 40px 0;
+	width: 100%;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 50px auto 0;
+	padding: 0 15px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.col-sm-4 {
+	flex: 0 0 30%;
+	max-width: 25%;
+	margin-bottom: 30px;
+}
+
+.footer-title {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.footer-text {
+	text-align: justify;
+	margin-top: 0;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+ul li {
+	margin-bottom: 5px;
+}
+.footer-link {
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+	padding: 5px;
+	border-radius: 5px;
+}
+.contact-icons {
+	display: flex;
+	align-content: center;
+}
+.footer-link:hover {
+	background-color: #fff;
+	color: #222;
+}
+
+.footer-list {
+	margin-top: 0;
+	margin-bottom: 20px;
+	list-style: none;
+	padding-left: 0;
+}
+
+.footer-divider {
+	background-color: #fff;
+	margin-bottom: 1rem;
+}
+
+.footer_content_wrapper {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.footer-line-small {
+	width: 1px;
+	height: 16px;
+	margin-right: 24px;
+	margin-left: 24px;
+	background-color: #e4e6f1;
+}
+.footer-policy-block {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+}
+@media (max-width: 992px) {
+	.col-sm-4 {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
+
+@media (max-width: 768px) {
+	.col-sm-4 {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+
+	.text-sm-right {
+		text-align: left;
+	}
+}
+
+@media (max-width: 576px) {
+	h4 {
+		font-size: 18px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	li {
+		font-size: 14px;
+	}
+}
+
+.custom-shape-divider-top-1677424268 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1677424268 svg {
+	position: relative;
+	display: block;
+	width: calc(100% + 1.3px);
+	height: 37px;
+}
+
+.custom-shape-divider-top-1677424268 .shape-fill {
+	height: max-content;
+	fill: #ffffff;
+	border: 0px;
+}

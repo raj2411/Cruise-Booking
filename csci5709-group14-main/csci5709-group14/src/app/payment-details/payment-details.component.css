@@ -1,0 +1,66 @@
+/*Author: Karan Aggarwal (B00912580) */
+
+.maindiv{
+	background-color:azure;
+}
+.paymentform {
+	padding: 2%;
+	background-color: white;
+	font-family: 'Lorem Ipsum';
+	max-width: 80%;
+	width: 90%;
+	margin: 0 auto;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0.15);
+	overflow: hidden;
+}
+
+h1 {
+	font-size: xx-large;
+	text-align: center;
+}
+
+label {
+	padding-right: 10px;
+	font-size: x-large;
+}
+input {
+	font-size: large;
+	height: 30px;
+	width: 30vw;
+	border-radius: 5%;
+}
+
+.left {
+	float: left;
+	width: 50%;
+}
+
+.right {
+	float: right;
+	width: 50%;
+	margin-top: 10%;
+	box-shadow: 0px 0px 0px rgba(0, 0, 0.15);
+}
+
+.submit {
+	background-color: rgb(51, 102, 255);
+	color: white;
+	padding: 7px 32px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 10%;
+}
+
+.cancel {
+	background-color: rgb(51, 102, 255);
+	color: white;
+	padding: 7px 32px;
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 10%;
+	margin-left: 40px;
+}

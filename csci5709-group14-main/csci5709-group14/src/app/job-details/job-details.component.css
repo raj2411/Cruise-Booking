@@ -1,0 +1,56 @@
+/* Author: Akash Gupta - B00912118 - ak459448@dal.ca */
+
+.column {
+  float: left;
+
+}
+
+.left {
+  width: 25%;
+}
+
+.center {
+  width: 22%;
+  margin-left: 23%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.right {
+  width: 25%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 1%;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.align-job {
+  float: right;
+  margin-top: -34px;
+}
+
+.details {
+  margin-left: 12%;
+}
+
+.jobDetailsDesc {
+  width: 55%;
+}
+
+.navbar {
+  background-color: #e3f2fd;
+}
+
+@media all and (max-width:817px)
+ {
+   .align-job
+   {
+    margin-top: 1%;
+   }
+ }
